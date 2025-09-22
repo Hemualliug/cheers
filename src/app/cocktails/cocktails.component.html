@@ -1,0 +1,12 @@
+<app-cocktails-filter (cocktailNameEntered)="filterCocktails($event)"></app-cocktails-filter>
+
+<div class="cocktails-container">
+    @if (displayedCocktails().length) {
+    @for (cocktail of displayedCocktails(); track cocktail.id) {
+    <app-cocktail-card [cocktail]="cocktail"></app-cocktail-card>
+    }
+    }
+    @else {
+    <p>No cocktail found with this name.</p>
+    }
+</div>

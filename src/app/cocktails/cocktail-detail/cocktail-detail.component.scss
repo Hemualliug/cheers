@@ -1,0 +1,29 @@
+.cocktail-detail-container {
+    display: flex;
+    flex-flow: row nowrap;
+
+    img {
+        width: 40%;
+        margin-right: 30px;
+    }
+
+    .cocktail-infos-container {
+        flex: 1 1 auto;
+
+        .cocktail-name {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            .icon-star {
+                height: 24px;
+                width: 24px;
+            }
+        }
+
+        dt,
+        .row {
+            margin-bottom: 10px;
+        }
+    }
+}

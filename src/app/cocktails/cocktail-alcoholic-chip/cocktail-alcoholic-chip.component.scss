@@ -1,0 +1,16 @@
+.cocktail-alcoholic-chip {
+    border-radius: 10px;
+    padding: 0 10px;
+    width: fit-content;
+
+    &.alcoholic {
+
+        color: rgb(234, 221, 236);
+        background-color: #7953c5;
+    }
+
+    &:not(.alcoholic) {
+        color: black;
+        background-color: #ded4f1;
+    }
+}

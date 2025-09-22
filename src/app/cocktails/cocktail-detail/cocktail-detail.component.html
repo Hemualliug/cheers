@@ -1,0 +1,33 @@
+<button type="button" (click)="onBack()">Back</button>
+
+@if (cocktailDetail()) {
+<div class="cocktail-detail-container">
+    <img [src]="cocktailDetail()?.imageUrl" [alt]="cocktailDetail()?.name">
+    <div class="cocktail-infos-container">
+        <div class="cocktail-name">
+            <h2>{{ cocktailDetail()?.name }}</h2>
+            <span [appFavoriteCocktail]="cocktailDetail()?.id" class="icon-star"></span>
+        </div>
+        <dl>
+            <div class="row">
+                <dt>Type:</dt>
+                <dd>
+                    <app-cocktail-alcoholic-chip [isCocktailAlcoholic]="cocktailDetail()?.isAlcoholic">
+                    </app-cocktail-alcoholic-chip>
+                </dd>
+            </div>
+
+            <dt>Ingredients:</dt>
+            <dd>
+                <ul>
+                    @for (ingredient of cocktailDetail()?.ingredients; track $index) {
+                    <li>{{ ingredient }}</li>
+                    }
+                </ul>
+            </dd>
+            <dt>Instructions:</dt>
+            <dd>{{ cocktailDetail()?.instructions }}</dd>
+        </dl>
+    </div>
+</div>
+}
