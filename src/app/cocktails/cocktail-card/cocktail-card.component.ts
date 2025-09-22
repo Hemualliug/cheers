@@ -14,5 +14,5 @@ import { CocktailAlcoholicChipComponent } from '../cocktail-alcoholic-chip/cockt
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CocktailCardComponent {
-  cocktail = input<Cocktail>();
+  cocktail = input.required<Cocktail | null>();
 }

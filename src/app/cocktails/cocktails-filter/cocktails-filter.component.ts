@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, output } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-cocktails-filter',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './cocktails-filter.component.html',
   styleUrl: './cocktails-filter.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

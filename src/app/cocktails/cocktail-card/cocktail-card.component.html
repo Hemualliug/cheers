@@ -3,7 +3,7 @@
     <div class="cocktail-info-container">
         <div class="cocktail-name">
             <a [routerLink]="['/cocktails', cocktail()?.id]">{{ cocktail()?.name }}</a>
-            <span [appFavoriteCocktail]="cocktail()?.id" class="icon-star"></span>
+            <span tabindex="0" [appFavoriteCocktail]="cocktail()?.id" class="icon-star"></span>
         </div>
         <app-cocktail-alcoholic-chip [isCocktailAlcoholic]="cocktail()?.isAlcoholic"></app-cocktail-alcoholic-chip>
         <div class="cocktail-ingredients">{{ cocktail()?.ingredients | pipeSeparatedList }}</div>
